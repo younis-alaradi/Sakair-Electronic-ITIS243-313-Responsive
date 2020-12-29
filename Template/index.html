@@ -1,0 +1,1173 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Website icon-->
+    <link rel="icon" href="../Template/images/Group3_market.png">
+
+    <!--Bootstrap CDN link -->
+    <link rel="stylesheet" href="css/Main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <!--Javascript CDN link -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!--Website title-->
+    <title>Sakhir Electronics </title>
+  </head>
+  <div>
+  <!----------------------------------------------Responsive Menu bar--------------------------------------------------------->
+
+
+    <nav class="MenuBar">
+      <div class="menu-icon-Menu"><span class="fas fa-bars"></span></div>
+      <div class="logoMenu" id="LogoHead" style="color: white;font-family: 'Times New Roman';font-size: 20px">Sakhir Electronics</div>
+      <div class="nav-items_Menu">
+        <li style="list-style-type: none;"><a href="#">Home</a></li>
+        <li style="list-style-type: none;margin-left: 12px"><a href="#TeamWorks">About</a></li>
+        <li style="list-style-type: none;margin-left: 12px"><a href="#Merchandise">Blogs</a></li>
+        <li style="list-style-type: none;margin-left: 12px"><a href="#ContactUS">Contact</a></li>
+        <li style="list-style-type: none;margin-left: 12px"><a href="#">Feedback</a></li>
+      </div>
+      <div class="search-icon-Menu"><span class="fas fa-search"></span></div>
+      <div class="cancel-icon-Menu"><span class="fas fa-times"></span></div>
+
+      <form action="#">
+        <input   id="mySearch" onfocus="Show_MenuItems()" style="background: #1e232b;width: auto;color: white" onkeyup="SearchFunction()" onfocusout="Hide_MenuItems()" class="form-control" placeholder="Search" required>
+        <ul id="myMenu" style="display:none;">
+          <li><a href="#"></a></li>
+          <li><a href="#Laptops_product">Laptops</a></li>
+          <li><a href="#PC_product">PC</a></li>
+          <li><a href="#screens_product">Screens</a></li>
+          <li><a href="#Smartphones_product">Smartphones</a></li>
+          <li><a href="#playstation's_products">PlayStation's</a></li>
+
+        </ul>
+        <button type="submit" class="fas fa-search"></button>
+      </form>
+    </nav>
+  <!---------------------------Menu bar scripting-------------------------------->
+    <script>
+      const menuBtn = document.querySelector(".menu-icon-Menu");
+      const searchBtn = document.querySelector(".search-icon-Menu");
+      const cancelBtn = document.querySelector(".cancel-icon-Menu");
+      const items = document.querySelector(".nav-items_Menu");
+      const form = document.querySelector("form");
+      menuBtn.onclick = ()=>{
+        items.classList.add("active");
+        menuBtn.classList.add("hide");
+        searchBtn.classList.add("hide");
+        cancelBtn.classList.add("show");
+      }
+      items.onclick = ()=>
+      {
+        items.classList.remove("active");
+        menuBtn.classList.remove("hide");
+        searchBtn.classList.remove("hide");
+        cancelBtn.classList.remove("show");
+        form.classList.remove("active");
+        cancelBtn.style.color = "#ff3d00";
+
+      }
+      cancelBtn.onclick = ()=>{
+        items.classList.remove("active");
+        menuBtn.classList.remove("hide");
+        searchBtn.classList.remove("hide");
+        cancelBtn.classList.remove("show");
+        form.classList.remove("active");
+        cancelBtn.style.color = "#ff3d00";
+      }
+      searchBtn.onclick = ()=>{
+        form.classList.add("active");
+        searchBtn.classList.add("hide");
+        cancelBtn.classList.add("show");
+      }
+      function SearchFunction()
+      {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById("mySearch");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myMenu");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+
+      }
+      function Show_MenuItems()
+      {
+        document.getElementById("myMenu").style.display='block';
+      }
+      function Hide_MenuItems()
+      {
+        document.getElementById("myMenu").style.display='none';
+      }
+    </script>
+<!----------------------------------------End - Menu bar scripting ------------------------------------>
+
+  <br>
+  <br>
+  <br>
+
+    <nav class="navbar" style="background-color: white">
+      <a href="javascript:void(0);" id="mobile-menu-toggler">
+
+        <div class="d-inline-flex align-items-center" style="background-color: white">
+          <a href="#" class="search-icon icon">
+            <!-- <img src="images/icons/search.png" alt=""> -->
+            <i class="ti-search"></i>
+            <a href="#cart" data-toggle="modal" data-target="#cart"  class="cart-bag icon  iconcarter">
+              <!-- <img src="images/icons/bag.png" alt=""> -->
+              <abbr title="Open cart section"><img src="images/carts.png" id="Cart_Icon" class="icon-left" alt="Cart"></abbr>
+              <span class="itemCount total-count" id="Shopping_Items_count"></span>
+            </a>
+            <a href="#" class="wishlist icon  animate__animated animate__bounceInLeft">
+              <abbr title="Coming Soon!!"><img src="images/delivery-truck.png" alt="Delivery icon" id="DelvireyIcon" class="ti-heart"></abbr>
+              <span class="itemCount" id="Item_Counts"></span>
+            </a>
+          </a>
+        </div>
+      </a>
+    </nav>
+
+  <br>
+  <br>
+  <br>
+
+    <h1 class="Intro_head">ITIS 243-313 Web Development</h1>
+  <!--Scrolling button-->
+  <button onclick="topFunction()" id="myBtn" title="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+    </svg>
+  </button>
+  <!-------------------------------------------------------------->
+
+  <!--End-Responsive menu bar-->
+
+  <!--Cart page -->
+  <div class="modal fade table-responsive"  id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg embed-responsive" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div style="overflow-y: scroll"  class="show-cart table embed-responsive"></div>
+          <div>Total price: $<span class="total-cart"></span></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary small" data-dismiss="modal">Close</button>
+          <button type="button" class="clear-cart btn btn-primary small">Clear Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------End of cart page--->
+  <!----Alert add to cart ----->
+
+  <div class="alert"  style="display: none;position: fixed;right: 0px;top: 0px;">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong>Added!</strong> thank you for purchases.
+  </div>
+  <!------------------------------------------------------Slider------------------------------------------------------------------------->
+  <br>
+  <br>
+  <br>
+
+  <section>
+      <iframe src="Slider/Slider.html" class="sliders" scrolling="no" width="100%" name="Slider-design" id="LPSlider"></iframe>
+  </section>
+    <!------------------------------------------------- Slider end----------------------------------------------------------------------->
+    <section class="feat-product">
+        <div class="row">
+          <div class="col">
+            <div class="sec-heading">
+              <h3 class="sec-title">Best selling this week</h3>
+            </div>
+          </div>
+        </div>
+    <!-- Featured Product end -->
+        <div class="embed-responsive-21by9">
+          <iframe   src="CardSlider/index.html" ></iframe>
+        </div>
+    <!-- Banner 02 section start -->
+    <section class="banner02">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="banner-content">
+              <h1>80% offers</h1>
+              <h4>By delivery orders</h4>
+              <a href="#Merchandise" class="btn-default">shop now</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="ban-img">
+              <img  class="sds" src="images/delivery-truck.png" alt="">
+            </div>
+          </div>
+        </div>        
+      </div>
+    </section>
+    <!-- Banner 02 section end -->
+    <!-- Popular products start -->
+    <section class="popular-products">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="sec-heading">
+              <h3  style="cursor: pointer" class="sec-title titlee" >Laptops</h3>
+            </div>
+          </div>
+        </div>
+        <!------------------------------------------------------------------------Laptops section ---------------------------------------------------->
+        <hr>
+        <section id="Merchandise">
+        <section class="features" id="Laptops_product">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 col-sm-6">
+                <div class="featureBox">
+                  <img  src="images/Laptops/DEll1Laptop.png" alt="Dell laptop model 1" id="TestValue_img" class="card-img-top">
+                  <br>
+                  <h5>Dell Laptop E7440</h5>
+                  <p >DELL B Grade Laptop E7440 Intel Core i5 4th Gen 4300U (1.90 GHz) 8 GB Memory 128 GB SSD 14.0" Windows 10 Pro 64-Bit</p>
+                  <br>
+                  <p><strong>480$</strong></p>
+                  <br>
+                  <a  href="#"   onclick="addToCart();" class="add-to-cart btn btn-danger" data-name="Dell laptop E7440" data-price="480">Add to cart</a>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                <div class="featureBox">
+                  <img src="images/Laptops/Dell2Laptop.jpg" alt="Dell laptop model 2" class="card-img-top">
+                  <h5>DELL Laptop 7480</h5>
+                  <p>DELL Laptop 7480 Intel Core i5 6300U (2.40 GHz) 16 GB Memory 256 SSD 14.0" Windows 10</p>
+                  <br>
+                  <p><strong>520$</strong></p>
+                  <br>
+                  <button type="button" data-price="520" data-name="Dell laptop 7480" onclick="addToCart();" class="add-to-cart btn btn-danger">Add to cart</button>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                <div class="featureBox">
+                  <img src="images/Laptops/Dell3Laptop.jpg" alt="DEll laptop model 3" class="card-img-top">
+                  <h5>DELL Laptop E7470</h5>
+                  <p>DELL Laptop E7470 Intel Core i5 6300U (2.40 GHz) 16 GB Memory 512 SSD 14.0" Windows 10</p>
+                  <br>
+                  <p><strong>580$</strong></p>
+                  <br>
+                  <button type="button" onclick="addToCart();" data-name="Dell laptop E7470" data-price="580" value="580" class="add-to-cart btn btn-danger">Add to cart</button>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                <div class="featureBox">
+                  <img src="images/Laptops/Laptop4.jpg" alt="Hp laptop model 1" class="card-img-top">
+                  <br>
+                  <h5>HP Laptop 640 G2</h5>
+                  <p>HP Laptop 640 G2 Intel Core i5 6300U (2.40 GHz) 16 GB Memory 1000 SSD 14.0" Windows 10</p>
+                  <br>
+                  <p><strong>560$</strong></p>
+                  <br>
+                  <button type="button" data-name="HP Laptop 640 G2" data-price="560" value="560" onclick="addToCart();" class="add-to-cart btn btn-danger">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Laptops section two resources bootstrap responsive images .card-img-top -->
+
+    <section class="features">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <div class="featureBox">
+              <img src="images/Laptops/Asus1.png" alt="Asus laptop" class="card-img-top">
+              <h5>ASUS VivoBook S14</h5>
+              <p>ASUS VivoBook S14 S433 Thin and Light Laptop, 14" FHD Display, Intel Core i5-1135G7 CPU, 8 GB DDR4 RAM, 512 GB PCIe SSD, Thunderbolt 3,
+                Wi-Fi 6, Windows 10 Home, Indie Black, S433EA-DH51</p>
+              <br>
+              <p><strong>470$</strong></p>
+              <br>
+              <button type="button" data-name="Asus VivoBoox S14" data-price="470"  onclick="addToCart();" class="add--to-cart btn btn-danger">Add to cart</button>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="featureBox">
+              <img src="images/Laptops/Asus2.png" alt="Asus Laptop" class="card-img-top">
+              <h5>ASUS TUF Gaming</h5>
+              <p>ASUS TUF Gaming - 15.6" 144 Hz - AMD Ryzen 7 3750H - GeForce RTX 2060 - 16 GB DDR4 - 512 GB SSD - RGB Keyboard - Gigabi
+                t Wi-Fi 5 - Windows 10 Home - Gaming Laptop (FX505DV-WB74)</p>
+              <br>
+              <p><strong>890$</strong></p>
+              <br>
+              <button type="button" data-name="Asus TUF" data-price="890"  onclick="addToCart();" class="add-to-cart btn btn-danger">Add to cart</button>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="featureBox">
+              <img src="images/Laptops/Asus3.png" alt="Asus laptop vivoBook" class="card-img-top">
+              <h5>ASUS VivoBook Flip</h5>
+              <p>ASUS VivoBook Flip TP412FA-XB56T Intel Core i5 10th Gen 10210U (1.60 GHz) 8 GB Memory 512 GB SSD Intel UHD
+                Graphics 14" Touchscreen 1920 x 1080 Convertible 2-in-1 Laptop Windows 10 Pro</p>
+              <p><strong>620$</strong></p>
+              <br>
+              <button type="button" data-price="620" data-name="Asus VivoBook Flip" onclick="addToCart();" class="add-to-cart btn btn-danger">Add to cart</button>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="featureBox">
+              <img src="images/Laptops/Acer1.png" alt="Acer laptop nitro" class="card-img-top">
+              <br>
+              <h5>Acer Nitro 5</h5>
+              <p>Acer Nitro 5 - 15.6" - Intel Core i5-10300H - GeForce GTX 1650 - 8 GB DDR4
+                - 512 GB SSD - Windows 10 Home - Gaming Laptop (AN515-55-55SD)</p>
+              <br>
+              <p><strong>560$</strong></p>
+              <br>
+              <button type="button"  data-name="Acer Nitro 5" data-price="560" onclick="addToCart();" class=" add-to-cart btn btn-danger">Add to cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+        <!------------------------------------------------------------PC section-------------------------------------------------------------->
+        <div class="sec-heading">
+          <h3 class="sec-title">PC</h3>
+        </div>
+        <hr>
+
+        <section class="features" id="PC_product">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 col-sm-6">
+                <div class="featureBox">
+                  <img src="images/PC/pc1.png" alt="CLX PC" class="card-img-top">
+                  <br>
+                  <h5>CLX GAMING PC</h5>
+                  <p>CLX SET GAMING AMD Ryzen 5 2600, NVIDIA GeForce RTX 2060 6GB GDDR6, 16GB Memory, 1TB HDD + 120GB SSD Storage MS Windows 10 Home</p>
+                  <br>
+                  <p><strong>960$</strong></p>
+                  <br>
+                  <button type="button" onclick="addToCart();" data-price="960" data-name="CLX Gaming PC" class="add-to-cart btn btn-danger">Add to cart</button>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                <div class="featureBox">
+                  <img src="images/PC/pc2.png" alt="CLX rayzen 9 pc" class="card-img-top">
+                  <br>
+                  <h5>CLX RAYZEN 9</h5>
+                  <p>CLX SET VR-Ready Gaming Desktop w/ AMD Ryzen 9 3900X Processor, 16GB DDR4 Memory,
+                    NVIDIA GeForce RTX 2080 SUPER Graphics, 240 GB SSD, 2 TB HDD, WiFi, Windows 10 Home 64-bit</p>
+                  <br>
+                  <p><strong>1250$</strong></p>
+                  <br>
+                  <button type="button" data-name="CLX RAYZEN 9" data-price="1250" onclick="addToCart();" class="add-to-cart btn btn-danger">Add to cart</button>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                <div class="featureBox">
+                  <img src="images/PC/pc3.png" alt="CLX Pc 3TB" class="card-img-top">
+                  <br>
+                  <h5>CLX PC 3TB</h5>
+                  <p>CLX SET VR-Ready Gaming Desktop w/ AMD Ryzen 7 3800X Processor, 32GB DDR4 Memory,
+                    NVIDIA GeForce RTX 2080 SUPER Graphics, 1 TB SSD, 3 TB HDD, WiFi, Windows 10 Home 64-bit</p>
+                  <br>
+                  <p><strong>1500$</strong></p>
+                  <br>
+                  <button type="button" data-name="CLX PC 3TB" data-price="1500" onclick="addToCart();" class="add-to-cart btn btn-danger">Add to cart</button>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                <div class="featureBox">
+                  <img src="images/PC/pc4.png" alt="CLX PC twin hard disk" class="card-img-top">
+                  <br>
+                  <h5>CLX RTX 3090</h5>
+                  <p>CLX SET Gaming Desktop - Liquid Cooled - Intel Core i9 10940X 3.30 GHz 14-Cores Processor, 32GB DDR4 Memory,
+                    GeForce RTX 3090 24GB GDDR6X Graphics, 480GB SSD, 3TB HDD, WiFi, Windows 10 Home 64-bit</p>
+                  <br>
+                  <p><strong>1800$</strong></p>
+                  <br>
+                  <button type="button" data-name="CLX RTX 3090" data-price="1800" onclick="addToCart();" class="add-to-cart btn btn-danger">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="sec-heading">
+          <h3 class="sec-title">SCREENS</h3>
+        </div>
+        <hr>
+        <!-----------------------------------------------Screens section ------------------------------------------------------------------------>
+        <section class="features" id="screens_product">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 col-sm-6">
+                <div class="featureBox">
+                  <img src="images/Screens/Screen1.png" alt="GIGABYTE Smart Screen"  class="card-img-top">
+                  <br>
+                  <h5>GIGABYTE G27FC 27</h5>
+                  <p>GIGABYTE G27FC 27" 165Hz 1080P Curved Gaming Monitor, 1920 x 1080 VA 1500R Display, 1ms (MPRT) Response Time,
+                    90% DCI-P3, FreeSync Premium, 1x Display Port 1.2, 2x HDMI 1.4, 2x USB 3.0</p>
+                  <br>
+                  <p><strong>1500$</strong></p>
+                  <br>
+                  <button type="button" data-name="GIGANYTE G27FC 27" data-price="1500" onclick="addToCart();" class="add-to-cart btn btn-danger">Add to cart</button>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                <div class="featureBox">
+                  <img src="images/Screens/Screen2.png" alt="SAMSUNG C43J890 SCREEN" class="card-img-top">
+                  <br>
+                  <h5>SAMSUNG C43J890 </h5>
+                  <p>SAMSUNG C43J890 43" 3840 x 1200 Double FHD 120Hz HDMI DisplayPort USB Type-C 32:10 Curved Super Ultra-Wide Monitor</p>
+                  <br>
+                  <p><strong>1350$</strong></p>
+                  <br>
+                  <button type="button" data-price="1350" data-name="SAMSUNG C43J890" onclick="addToCart();" class="add-to-cart btn btn-danger">Add to cart</button>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                <div class="featureBox">
+                  <img src="images/Screens/Screen3.png" alt="CLX Pc 3TB" class="card-img-top">
+                  <br>
+                  <h5>ASUS ROG</h5>
+                  <p>ASUS ROG Strix XG49VQ 49" Super Ultra-Wide HDR
+                    Curved Gaming Monitor - 32:9 (3840 x 1080), 144Hz, FreeSync 2, DisplayHDR 400, Eye Care with DP HDMI</p>
+                  <br>
+                  <p><strong>1800$</strong></p>
+                  <br>
+                  <button type="button" data-name="ASUS ROG" data-price="1800" onclick="addToCart();" class="add-to-cart btn btn-danger">Add to cart</button>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                <div class="featureBox">
+                  <img src="images/Screens/Screen4.png" alt="ASUS ROG SCREEN" class="card-img-top">
+                  <br>
+                  <h5>ASUS ROG </h5>
+                  <p>ASUS ROG Strix XG43VQ 43" 3840 x 1200 1ms MPRT 120 Hz HDMI, DisplayPort Built-in Speakers
+                    1800R Curved Gaming Monitor with FreeSync 2 HDR, DisplayHDR 400, DCI-P3 90%, Shadow Boost</p>
+                  <br>
+                  <p><strong>1650$</strong></p>
+                  <br>
+                  <button type="button"  data-name="ASUS ROG 2" data-price="1650" onclick="addToCart();" class="add-to-cart btn btn-danger">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!------------------------------------------------------Smart phone section ---------------------------------------------------------->
+        <div class="sec-heading" id="Smartphones_product">
+          <h3 class="sec-title">SMARTPHONES</h3>
+        </div>
+
+        <hr>
+        <section class="features">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 col-sm-6">
+                <div class="featureBox">
+                  <img src="images/SmartPhones/Sphone1.png" alt="Samsung G20"  class="card-img-top">
+                  <br>
+                  <h5>SAMSUNG G20</h5>
+                  <p>6.2” Quad HD+ Dynamic AMOLED 2X
+                    Infinity-O Display (3200x1440)
+                    563 ppi
+                    HDR10+ 120 WATT LED light</p>
+                  <br>
+                  <p><strong>590$</strong></p>
+                  <br>
+                  <button type="button" data-name="SAMSUNG G20" data-price="590" onclick="addToCart();" class="add-to-cart btn btn-danger">Add to cart</button>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                <div class="featureBox">
+                  <img src="images/SmartPhones/Sphone2.png" alt="Iphone 12" class="card-img-top">
+                  <br>
+                  <h5>IPHONE 12</h5>
+                  <p>Processor Speed: 2x 3.1GHz Firestorm +4x 1.8GHz Icestorm RAM SIZE: 4GB DDR4
+                    Memory (internal): 128GB</p>
+                  <br>
+                  <p><strong>980$</strong></p>
+                  <br>
+                  <button type="button" data-name="IPHONE 12" data-price="980" onclick="addToCart();" class="add-to-cart btn btn-danger">Add to cart</button>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                <div class="featureBox">
+                  <img src="images/SmartPhones/Sphone3.png" alt="SAMSUNG A20" class="card-img-top">
+                  <br>
+                  <h5>SAMSUNG A20</h5>
+                  <p>Samsung Galaxy A20 is powered by an octa-core Samsung Exynos 7884 2 core 128 GB RAM 32</p>
+                  <br>
+                  <p><strong>480$</strong></p>
+                  <br>
+                  <button type="button"  data-price="480" data-name="SAMSUNG A20" onclick="addToCart();" class="add-to-cart btn btn-danger">Add to cart</button>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                <div class="featureBox">
+                  <img src="images/SmartPhones/Sphone4.png" alt="huawei p30-pro" class="card-img-top">
+                  <br>
+                  <h5>HUAWEI P30-PRO </h5>
+                  <p>huawei p30-pro 256 GB 32 RAM Full HD screen , Finger point , Airpods 6 core processor Azl high speed</p>
+                  <br>
+                  <p><strong>620$</strong></p>
+                  <br>
+                  <button  onclick="addToCart()"  data-price="620" data-name="HUAWEI P30-PRO" type="button" class="add-to-cart btn btn-danger">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!----------------------------------Smart phones section (2) ---------------------------------------------------->
+        <section class="features">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 col-sm-6">
+                <div class="featureBox">
+                  <img src="images/SmartPhones/Sphone5.png" alt="Samsung Note20"  class="card-img-top">
+                  <br>
+                  <h5>SAMSUNG NOTE20</h5>
+                  <p>Storage 256GB Display Dynamic (3088 x 1440) Resolution</p>
+                  <br>
+                  <p><strong>650$</strong></p>
+                  <br>
+                  <button type="button" data-name="SAMSUNG NOTE 20" data-price="650" onclick="addToCart();" class="add-to-cart btn btn-danger">Add to cart</button>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                <div class="featureBox">
+                  <img src="images/SmartPhones/Sphone6.png" alt="Samsung s10" class="card-img-top">
+                  <br>
+                  <h5>SAMSUNG S10</h5>
+                  <p> full HD ,faster charge 4x1.8GHz Icestorm RAM  4GB DDR4
+                    Memory internal 128GB</p>
+                  <br>
+                  <p><strong>980$</strong></p>
+                  <br>
+                  <button type="button" data-name="SAMSUNG s10" data-price="980" onclick="addToCart();" class="add-to-cart btn btn-danger">Add to cart</button>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                <div class="featureBox">
+                  <img src="images/SmartPhones/Sphone7.png" alt="Iphone XR" class="card-img-top">
+                  <br>
+                  <h5>IPHONE XR</h5>
+                  <p>Iphone xr black color , 256 GM 4core RAM 32,2756 x 1820 full HD</p>
+                  <br>
+                  <p><strong>720$</strong></p>
+                  <br>
+                  <button type="button" data-name="IPHONE XR" data-price="720" onclick="addToCart();" class="add-to-cart btn btn-danger">Add to cart</button>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                <div class="featureBox">
+                  <img src="images/SmartPhones/Sphone8.png" alt="NOKIA 5.3" class="card-img-top">
+                  <br>
+                  <h5>NOKIA 5.3</h5>
+                  <p>NOKIA 5.3 64 GB 16 GB RAM . faster charge 4G (fourth generation network)</p>
+                  <br>
+                  <p><strong>620$</strong></p>
+                  <br>
+                  <button type="button" value="620" onclick="addToCart();" data-price="620" data-name="NOKIA 5.3" class="add-to-cart btn btn-danger">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!---------------------------------------------------------------------------Playstation section ----------------------------------------------------------->
+        <div class="sec-heading">
+          <h3 class="sec-title">PLAYSTATION'S</h3>
+        </div>
+        <hr>
+        <section class="features" id="playstation's_products">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 col-sm-6">
+                <div class="featureBox">
+                  <img src="images/Playstations/playStation1.png" alt="PS5"  class="card-img-top">
+                  <br>
+                  <h5>Playstation 5 </h5>
+                  <p>3TB GB , full HD , CD disk , Full Resolutions, wireless connections , 2 control , 1 free game</p>
+                  <br>
+                  <p><strong>1900$</strong></p>
+                  <br>
+                  <button type="button" data-name="Playstation 5"  data-price="1900" onclick="addToCart();" class="add-to-cart btn btn-danger">Add to cart</button>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="featureBox">
+                  <img src="images/Playstations/playsattion2.png" alt="PS4" class="card-img-top">
+                  <br>
+                  <h5>Playstation 5</h5>
+                  <p>Playstation 5 , 1TB , Free plus (1 year) , 3 games , 2 control's ,2 controls cover,Full HD</p>
+                  <br>
+                  <p><strong>980$</strong></p>
+                  <br>
+                  <button type="button" data-name="Playstation 5s" data-price="980" onclick="addToCart();" class="add-to-cart btn btn-danger">Add to cart</button>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="featureBox">
+                  <img src="images/Playstations/playstation3.jpg" alt="PS3" class="card-img-top">
+                  <br>
+                  <br>
+                  <br>
+                  <h5>Playstation 3 </h5>
+                  <p>720 x 420 screen resolutions , 500 GB , 5 Games , steering wheels control , open source disk (NEW device) , <strong>10 piece left</strong> </p>
+                  <br>
+                  <p><strong>650$</strong></p>
+                  <br>
+                  <button type="button" data-name="Playstation 3 " data-price="650" onclick="addToCart();" class="add-to-cart btn btn-danger">Add to cart</button>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+
+                <div class="featureBox">
+                  <img src="images/Playstations/playstation2.jpg" alt="PS2" class="card-img-top">
+                  <br>
+                  <h5>Playstation(2)</h5>
+                  <p><strong>Renewed</strong> , 20 CD's , 4 controls , Driver game , Bully , Teken , WWE</p>
+                  <br>
+                  <p><strong>320$</strong></p>
+                  <br>
+                  <button type="button" data-name="playstation 2" data-price="320" onclick="addToCart();" class="add-to-cart btn btn-danger">Add to cart</button>
+
+                </div>
+              </div>
+            </div>
+        </section>
+    </section>
+    <!-------------------------------------------------END of purchases section ---------------------------------------------------------------------------->
+
+
+    <!-- Features section start -->
+    <section class="features">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <div class="featureBox">
+
+              <img src="images/Icons/Money.png" alt="Cash back" class="feat-icon">
+              <h5>Money back guarantee</h5>
+              <p>100% secure , 100% money back</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="featureBox">
+              <img src="images/Icons/free-shipping.png" alt=" Free Delivery" class="feat-icon">
+              <h5>Free Delivery</h5>
+              <p>Free delivery over 10 product</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="featureBox">
+              <img src="images/Icons/Call_Center.png" alt="Support" class="feat-icon">
+              <h5>support</h5>
+              <p>Support available 24 hours</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="featureBox">
+              <img src="images/Icons/payment.png" alt="Secure payment" class="feat-icon">
+              <h5>Secure payment</h5>
+              <p> paybal , visacard , mastercard</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Features section end -->
+    <!-------------------------------------------------------------------Coming soon section------------------------------------------------------------------>
+    <section class="trending-products">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="sec-heading">
+              <h3 class="sec-title">COMING SOON !!!!!!!!</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <div class="product-item">
+              <figure class="product-thumb">
+                <img src="images/Courses/java.png" alt=" Java programming course" class="icon">
+                <div class="action-links">
+                  <a href="https://en.wikipedia.org/wiki/Java_(programming_language)" class="quick-view icon"><i class="ti-eye"></i></a>
+                  <a href="https://www.w3schools.com/java/default.asp" class="wishlist icon"><i class="ti-heart"></i></a>
+                  <a href="https://www.oracle.com/java/technologies/" class="add-cart icon"><i class="ti-shopping-cart"></i></a>
+                </div>
+              </figure>
+
+              <div class="product-content">
+                <h5 class="product-name"><a href="#">JAVA Programming Course</a></h5>
+                <div class="ratings">
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                </div>
+                <p class="price">$50</p>
+              </div>
+            </div>  
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="product-item">
+              <figure class="product-thumb">
+                <img src="images/Courses/php.png" alt="PHP course">
+                <div class="action-links">
+                  <a href="https://en.wikipedia.org/wiki/PHP" class="quick-view icon"><i class="ti-eye"></i></a>
+                  <a href="https://www.w3schools.com/php/DEFAULT.asp" class="wishlist icon"><i class="ti-heart"></i></a>
+                  <a href="https://www.tutorialspoint.com/php/index.htm" class="add-cart icon"><i class="ti-shopping-cart"></i></a>
+                </div>
+              </figure>
+
+              <div class="product-content">
+                <h5 class="product-name"><a href="#">PHP server development</a></h5>
+                <div class="ratings">
+                  <a href=""><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                </div>
+                <p class="price">$60</p>
+              </div>
+            </div>  
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="product-item">
+              <figure class="product-thumb">
+                <img src="images/Courses/html.png" alt="HTML course">
+                <div class="action-links">
+                  <a href="https://en.wikipedia.org/wiki/HTML" class="quick-view icon"><i class="ti-eye"></i></a>
+                  <a href="https://www.w3schools.com/html/" class="wishlist icon"><i class="ti-heart"></i></a>
+                  <a href="https://html.spec.whatwg.org/" class="add-cart icon"><i class="ti-shopping-cart"></i></a>
+                </div>
+              </figure>
+
+              <div class="product-content">
+                <h5 class="product-name"><a href="#">Web structure HTML</a></h5>
+                <div class="ratings">
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                </div>
+                <p class="price"><del>50$</del>    $35</p>
+              </div>
+            </div>  
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="product-item">
+              <figure class="product-thumb">
+                <img src="images/Courses/wordpress.png" alt="Wordpress course">
+                <div class="action-links">
+                  <a href="https://en.wikipedia.org/wiki/WordPress" class="quick-view icon"><i class="ti-eye"></i></a>
+                  <a href="https://wordpress.org/download/" class="wishlist icon"><i class="ti-heart"></i></a>
+                  <a href="https://www.youtube.com/watch?v=8OBfr46Y0cQ" class="add-cart icon"><i class="ti-shopping-cart"></i></a>
+                </div>
+              </figure>
+
+              <div class="product-content">
+                <h5 class="product-name"><a href="#">Wordpress website management content</a></h5>
+                <div class="ratings">
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                </div>
+                <p class="price">$90</p>
+              </div>
+            </div>  
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="product-item">
+              <figure class="product-thumb">
+                <img src="images/Courses/wordpress.png" alt="Wordpress theme course">
+                <div class="action-links">
+                  <a href="https://wordpress.org/themes/" class="wishlist icon"><i class="ti-heart"></i></a>
+                </div>
+              </figure>
+
+              <div class="product-content">
+                <h5 class="product-name"><a href="#">Wordpress Theme creation course</a></h5>
+                <div class="ratings">
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                </div>
+                <p class="price">$95</p>
+              </div>
+            </div>  
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="product-item">
+              <figure class="product-thumb">
+                <img src="images/Courses/copywriting.png" alt="social media bot">
+                <div class="action-links">
+                  <a href="https://en.wikipedia.org/wiki/Internet_bot" class="wishlist icon"><i class="ti-heart"></i></a>
+
+                </div>
+              </figure>
+              <div class="product-content">
+                <h5 class="product-name"><a href="#">Social media bot by js , json , html,manifest</a></h5>
+                <div class="ratings">
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                </div>
+                <p class="price">$120</p>
+              </div>
+            </div>  
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="product-item">
+              <figure class="product-thumb">
+                <img src="images/Courses/file.png" alt="Python for web development">
+                <div class="action-links">
+                  <a href="https://www.w3schools.com/python/" class="wishlist icon"><i class="ti-heart"></i></a>
+                </div>
+              </figure>
+
+              <div class="product-content">
+                <h5 class="product-name"><a href="#">Python for web Development</a></h5>
+                <div class="ratings">
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                </div>
+                <p class="price">$96</p>
+              </div>
+            </div>  
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="product-item">
+              <figure class="product-thumb">
+                <img src="images/Courses/asp.png" alt="">
+                <div class="action-links">
+                  <a href="https://www.w3schools.com/asp/default.ASP" class="wishlist icon"><i class="ti-heart"></i></a>
+                </div>
+              </figure>
+              <div class="product-content">
+
+                <h5 class="product-name"><a href="#">Active server page </a></h5>
+                <div class="ratings">
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                  <a href="#"><i class="ti-star"></i></a>
+                </div>
+                <p class="price">$95</p>
+
+              </div>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-------------------------------------------------------------------------------Teamwork section------------------------------------------------------------------>
+
+    <!-- Blog post start -->
+    <section class="blog" id="TeamWorks">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="sec-heading">
+              <h3 class="sec-title">Teamwork</h3>
+            </div>
+          </div>
+        </div>
+          <div class="col-md-4">
+            <div class="post-item">
+              <img src="images/programmer1.png" alt="Mohammed Abdulaziz" class="TeamWork_Icon">
+              <div class="post-content">
+                <a href="#" class="post-meta date">University of Bahrain</a>
+                <h3 class="post-title"><a href="#" onclick="MOhammedAbdulaziz();">Mohammed Abdulaziz</a></h3>
+                <div class="meta-tags">
+                  <a href=" " class="post-meta category"><i class="ti-package"></i>Design and structure</a><a href="#" class="post-meta comments"><i class="ti-comments"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        <br>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="post-item">
+
+              <img src="images/programmer3.png" alt="Abduljalil Dashti" class="TeamWork_Icon">
+              <div class="post-content">
+                <a href="#" class="post-meta date">University of Bahrain</a>
+                <h3 class="post-title"><a href="#" onclick="Abduljalil();">Abduljalil Dashti</a></h3>
+                <div class="meta-tags">
+                  <a href="#" class="post-meta category"><i class="ti-package"></i>HTML Structure and CSS</a><a href="#" class="post-meta comments"><i class="ti-comments"></i></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <br>
+        <div class="row">
+        </div>
+
+          <div class="col-md-4">
+            <div class="post-item">
+              <img src="images/programmer2.png" alt="Younis Alaradi" class="TeamWork_Icon">
+              <div class="post-content">
+                <a href="#" class="post-meta date">University of Bahrain</a>
+                <h3 class="post-title"><a href="#" onclick="YounisAlaradi();">Younis Alaradi</a></h3>
+                <div class="meta-tags">
+                  <a href="#" class="post-meta category">
+                    <i class="ti-package"></i>Frameworks  and scripting</a>
+                  <a href="#" class="post-meta comments">
+                    <i class="ti-comments">
+                    </i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+
+
+
+
+
+    </section>
+    <!-- Blog post end -->
+
+    <!-- Instagram start -->
+    <section class="instagram">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="sec-heading">
+              <h3 class="sec-title">follow us</h3>
+            </div>
+          </div>
+        </div> 
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <a href="#">
+              <img src="images/instagram/1.jpg" alt="">
+              <i class="ti-instagram"></i>
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="#">
+              <img src="images/instagram/2.jpg" alt="">
+              <i class="ti-instagram"></i>
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="#">
+              <img src="images/instagram/3.jpg" alt="">
+              <i class="ti-instagram"></i>
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="#">
+              <img src="images/instagram/4.jpg" alt="">
+              <i class="ti-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Instagram end -->
+      </div>
+
+    <!-- Footer strat -->
+    <footer class="footer container-fluid">
+      <div class="container foo-top">
+        <div class="row">
+          <div class="col-md-2 col-sm-6">
+            <div class="widget widget-navigation">
+              <h4 class="widget-title">Resources</h4>
+              <ul>
+                <li><a href="https://github.com/younis-alaradi/Shopping_Cart_web3">Younis Alaradi GitHub Shopping Cart </a></li>
+                <li><a href="https://www.w3schools.com/">W3school</a></li>
+                <li><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiUktzYl6ztAhWFnVwKHUogD-IQFjAAegQIARAD&url=https%3A%2F%2Fgithub.com%2F&usg=AOvVaw38IHvcyBra8HGhmSxvlCGw">GitHub</a></li>
+                <li><a href="https://www.jssor.com/">Jssor slider</a></li>
+                <li><a href="https://codepen.io/">Code pen</a></li>
+                <li><a href="https://stackoverflow.com/">Stack overflow</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-2 offset-md-1 col-sm-6">
+            <div class="widget widget-navigation">
+              <h4 class="widget-title">Resources (2)</h4>
+              <ul>
+                <li><a href="https://www.sololearn.com/">Solo learn</a></li>
+                <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
+                <li><a href="https://animejs.com/">Anime.js Framework</a></li>
+                <li><a href="https://www.tutorialspoint.com/index.htm">TutorialsPoint</a></li>
+                <li><a href="https://www.flaticon.com/">Flaticon</a></li>
+                <li><a href="https://fonts.google.com/?selection.family=Monoton|Open+Sans:wght@300&query=open&sidebar.open=true">Google fonts (Pick fonts editor)</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-2 offset-md-1 col-sm-6" id="ContactUS">
+            <div class="widget widget-navigation">
+              <h4 class="widget-title">Contact Us directly on Whatsapp</h4>
+              <ul>
+
+                <li><a href="wa.link/rnt2dd">Abduljalil</a></li>
+                <li><a href="wa.link/mu0c1v">Mohammed abdulaziz</a></li>
+                <li><a href="wa.link/605j2p">Younis Alaradi</a></li>
+
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-3 offset-md-1 col-sm-6">
+            <div class="widget widget-app">
+              <h4 class="widget-title">Coming Soon app on mobile</h4>
+              <div class="app-btn">
+
+                <a href="https://play.google.com/store" class="google-play">
+                  <i class="ti-android"></i>
+                  <p><span>on</span>Goole play</p>
+                </a>
+
+                <a href="https://www.apple.com/app-store/" class="app-store">
+                  <i class="ti-apple"></i>
+                  <p><span>on</span>app store</p>
+                </a>
+
+              </div>
+            </div>
+            <div class="widget widget-social">
+              <h4 class="widget-title">Online shopping</h4>
+              <div class="social-media">
+                <!--------------------------------------------Bootstrap Icon----------------------------------------------------->
+                <a href="#">
+                  <i class="ti-facebook">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-badge-8k-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3.9 6.605c0 .51.405.866.95.866.545 0 .945-.356.945-.866s-.4-.852-.945-.852c-.545 0-.95.343-.95.852zm-.192 2.668c0 .589.492.984 1.142.984.646 0 1.143-.395 1.143-.984S5.496 8.28 4.85 8.28c-.65 0-1.142.404-1.142.993z"/>
+                      <path fill-rule="evenodd" d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2zm5.17 7.348c0 1.041-.927 1.766-2.333 1.766-1.406 0-2.312-.72-2.312-1.762 0-.954.712-1.384 1.257-1.494v-.053c-.51-.154-1.02-.558-1.02-1.331 0-.914.831-1.587 2.088-1.587 1.253 0 2.083.673 2.083 1.587 0 .782-.523 1.182-1.02 1.331v.053c.545.11 1.257.545 1.257 1.49zM12.102 5h1.306l-2.14 2.584 2.232 3.415h-1.428l-1.679-2.624-.615.699v1.925H8.59V5h1.187v2.685h.057L12.102 5z"/>
+                    </svg>
+                  </i>
+                </a>
+
+                <a href="#">
+                  <i class="ti-twitter-alt">
+                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bag-check-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                       <path fill-rule="evenodd" d="M5.5 3.5a2.5 2.5 0 0 1 5 0V4h-5v-.5zm6 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                     </svg>
+                   </i>
+                </a>
+
+                <a href="#">
+                  <i class="ti-pinterest">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bar-chart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="4" height="5" x="1" y="10" rx="1"/>
+                      <rect width="4" height="9" x="6" y="6" rx="1"/>
+                      <rect width="4" height="14" x="11" y="1" rx="1"/>
+                    </svg>
+                  </i>
+                </a>
+
+                <a href="#">
+                  <i class="ti-instagram">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bootstrap-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4h-8zm1.06 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062V12zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375v2.725z"/>
+                    </svg>
+                  </i>
+                </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-------------------------------------------------------------------End of bootstrap icon ----------------------------------------------------->
+
+      <div class="container">
+        <p class="copyright">Copyright © 2020 <a href="http://www.uob.edu.bh/">University of Bahrain</a>. All rights reserved.</p>
+      </div>
+
+    </footer>
+    </section>
+    </section>
+
+  </div>
+    <!-- Footer end -->
+
+    <!-- JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+  <!--Functions js file--->
+  <script src="js/Functions.js"></script>
+  <!---Menu file -->
+  <script src="js/FixedMenu.js"></script>
+  <!-- animations-->
+  <script src="js/Animations.js">
+  </script>
+  <!--Cart panel functionality-->
+  <script  src="../Template/js/Cart_page.js"></script>
+
+  </body>
+</html>
